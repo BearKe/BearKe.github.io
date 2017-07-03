@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Maximum Product of Three Numbers | BearKe&#39;s Room 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="熊尼玛">
+    
+    
+
+    <meta name="description" content="这是LeetCode的第628道题  Given an integer array, find three numbers whose product is   maximum and output the maximum product. Example 1:    Input: [1,2,3]     Output: 6 Example 2:    Input: [1,2,3,4]   Out">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maximum Product of Three Numbers | BearKe&#39;s Room">
+<meta property="og:url" content="http://yoursite.com/2017/07/03/my-new-post/index.html">
+<meta property="og:site_name" content="BearKe&#39;s Room">
+<meta property="og:description" content="这是LeetCode的第628道题  Given an integer array, find three numbers whose product is   maximum and output the maximum product. Example 1:    Input: [1,2,3]     Output: 6 Example 2:    Input: [1,2,3,4]   Out">
+<meta property="og:updated_time" content="2017-07-03T06:19:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Maximum Product of Three Numbers | BearKe&#39;s Room">
+<meta name="twitter:description" content="这是LeetCode的第628道题  Given an integer array, find three numbers whose product is   maximum and output the maximum product. Example 1:    Input: [1,2,3]     Output: 6 Example 2:    Input: [1,2,3,4]   Out">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">BearKe&#39;s Room</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          在狂热思绪下喊出的爱情宣言中，存在着爱情的实体。 --From 太宰治「新ハムレット」
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Maximum Product of Three Numbers</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-07-03" class="post-meta__date date">2017-07-03</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>这是LeetCode的第628道题</p>
+<blockquote>
+<p>Given an integer array, find three numbers whose product is   maximum and output the maximum product.</p>
+<p>Example 1:  </p>
+<p> <code>Input: [1,2,3]  
+  Output: 6</code></p>
+<p>Example 2:  </p>
+<p> <code>Input: [1,2,3,4]
+  Output: 24</code></p>
+<p>Note:<br> The length of the given array will be in range [3,10000] and  all elements are in the range [-1000, 1000].<br>Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.</p>
+</blockquote>
+<p>翻译过来大致的意思是，给定一个整型数组，找出任意三个数相乘的最大值。</p>
+<p>例如：<br><code>Input：4 5 0 2 1 -1   
+ Output：40</code>  </p>
+<p>显而易见的，4、5、2 三者相乘得到的将是最大值40</p>
+<p>   以下是具体的代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">---C++</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line">   </div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">   </div><div class="line">   <span class="keyword">const</span> <span class="keyword">int</span> SIZE = <span class="number">5</span>;</div><div class="line">   <span class="keyword">int</span> a[]=&#123;<span class="number">0</span>&#125;;</div><div class="line"></div><div class="line">   <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums;</div><div class="line">   </div><div class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; SIZE ; i++) &#123;</div><div class="line">       <span class="built_in">cin</span> &gt;&gt; a[i] ;</div><div class="line">       nums.push_back(a[i]);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   sort(nums.begin(), nums.end());</div><div class="line">   <span class="keyword">int</span> n = nums.size();</div><div class="line">   <span class="keyword">int</span> temp1 = nums[n<span class="number">-1</span>] * nums[n<span class="number">-2</span>] * nums[n<span class="number">-3</span>];</div><div class="line">   <span class="keyword">int</span> temp2 = nums[<span class="number">0</span>] * nums[<span class="number">1</span>] * nums[n<span class="number">-1</span>];</div><div class="line">   <span class="built_in">cout</span> &lt;&lt; (temp1&gt;temp2?temp1:temp2) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">   <span class="keyword">return</span> <span class="number">0</span> ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>由于最近开始接触C++，因此这是一个很好的学习机会。<br>我打算从vector讲起，之后再回到题目本身</p>
+<h2 id="关于Vector"><a href="#关于Vector" class="headerlink" title="关于Vector"></a>关于Vector</h2><blockquote>
+<p>vector是C++标准程序库里最基本的容器，大多数状况下都很有效率。vector设计之初即是为了改善C语言原生数组的种种缺失与不便，而欲提供一种更有效、更安全的数组。vector的使用接口刻意模拟C语言原生数组，较明显的差异在于内存管理，原生数组必须在定义数组的时候明确指定数组长度(例如 int a[5])，但是 vector 不需要指定，而是会在运行期依据状况自我调整长度，动态增大容量。</p>
+</blockquote>
+<hr>
+<h3 id="成员函数概览"><a href="#成员函数概览" class="headerlink" title="成员函数概览"></a>成员函数概览</h3><p><code>vector&lt;int&gt; vec;</code></p>
+<blockquote>
+<p>vector 类别是以容器（Container）模式为基准设计的，也就是说，基本上它有 begin()，end()，size()，max_size()，empty() 以及 swap() 这几个方法。</p>
+</blockquote>
+<h4 id="访问元素的方法"><a href="#访问元素的方法" class="headerlink" title="访问元素的方法"></a>访问元素的方法</h4><blockquote>
+<p>vec[i] - 访问索引值为 i 的元素引用。 (索引值从零起算，故第一个元素是vec[0]。)<br>vec.at(i) - 访问索引值为 i 的元素的引用，以 at() 访问会做数组边界检查，如果访问越界将会抛出一个例外，这是与operator[]的唯一差异。</p>
+<p>vec.front() - 回传 vector 第一个元素的引用。</p>
+<p>vec.back() - 回传 vector 最尾端元素的引用。</p>
+</blockquote>
+<h4 id="新增或移除元素的方法"><a href="#新增或移除元素的方法" class="headerlink" title="新增或移除元素的方法"></a>新增或移除元素的方法</h4><blockquote>
+<p>vec.push_back() - 新增元素至 vector 的尾端，必要时会进行内存配置。</p>
+<p>vec.pop_back() - 删除 vector 最尾端的元素。</p>
+<p>vec.insert() - 插入一个或多个元素至 vector 内的任意位置。</p>
+<p>vec.erase() - 删除 vector 中一个或多个元素。</p>
+<p>vec.clear() - 清空所有元素。</p>
+</blockquote>
+<h4 id="获取长度、容量"><a href="#获取长度、容量" class="headerlink" title="获取长度、容量"></a>获取长度、容量</h4><blockquote>
+<p>vec.size() - 获取 vector 目前持有的元素个数。</p>
+<p>vec.empty() - 如果 vector 内部为空，则传回 true 值。</p>
+<p>vec.capacity() - 获取 vector 目前可容纳的最大元素个数。这个方法与内存的配置有关，它通常只会增加，不会因为元素被删减而随之减少。</p>
+</blockquote>
+<h4 id="重新配置、重置长度"><a href="#重新配置、重置长度" class="headerlink" title="重新配置、重置长度"></a>重新配置、重置长度</h4><blockquote>
+<p>vec.reserve() - 如有必要，可改变 vector 的容量大小（配置更多的内存）。在众多的 STL 实做，容量只能增加，不可以减少。</p>
+<p>vec.resize() - 改变 vector 目前持有的元素个数。</p>
+</blockquote>
+<h4 id="迭代-Iterator"><a href="#迭代-Iterator" class="headerlink" title="迭代 (Iterator)"></a>迭代 (Iterator)</h4><blockquote>
+<p>vec.begin() - 回传一个Iterator，它指向 vector 第一个元素。</p>
+<p>vec.end() - 回传一个Iterator，它指向 vector 最尾端元素的下一个位置（请注意：它不是最末元素）。</p>
+<p>vec.rbegin() - 回传一个反向Iterator，它指向 vector 最尾端元素的。</p>
+<p>vec.rend() - 回传一个Iterator，它指向 vector 的第一个元素。</p>
+</blockquote>
+<hr>
+<p>看下面这段代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; SIZE ; i++) &#123;</div><div class="line">        <span class="built_in">cin</span> &gt;&gt; a[i] ;</div><div class="line">        nums.push_back(a[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    sort(nums.begin(), nums.end());</div><div class="line">    <span class="keyword">int</span> n = nums.size();</div></pre></td></tr></table></figure>
+<p>注意，使用vector时，需要使用头函数<code>#include&lt;vector&gt;</code>以及<code>using namesapce std;</code></p>
+<p>我们定义了一个int型的vector容器nums<br>在接下来的循环中，对于不超过常数SIZE的值，我们通过手动的输入数值，输进数组 a[ ]，之后通过<code>nums.push_back()</code>将值存入容器nums中。<br>而后通过<code>sort(nums.begin(), nums.end())</code> 对容器中的数值进行排序。<br>最后一行<code>int n = nums.size()</code>即把nums含有的数据的个数赋给n。</p>
+<h2 id="关于题目本身"><a href="#关于题目本身" class="headerlink" title="关于题目本身"></a>关于题目本身</h2><p>这道题的核心就是下面这段代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> temp1 = nums[n<span class="number">-1</span>] * nums[n<span class="number">-2</span>] * nums[n<span class="number">-3</span>];</div><div class="line"><span class="keyword">int</span> temp2 = nums[<span class="number">0</span>] * nums[<span class="number">1</span>] * nums[n<span class="number">-1</span>];</div><div class="line"><span class="built_in">cout</span> &lt;&lt; (temp1&gt;temp2?temp1:temp2) &lt;&lt; <span class="built_in">endl</span>;</div></pre></td></tr></table></figure>
+<p>temp1：即取排序后前三位最大的数的乘积<br>temp2：考虑到了最小的两个数是负数的问题，负负得正并乘上最大正数，得到待确定的最大值<br>而随后的输出，再从二者则最大值即为所求。</p>
+<p><br><br><br>如果有什么问题或者建议的话，欢迎到QQ上懟我。  –以上</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
